@@ -1,24 +1,20 @@
-# README
+# Populate DB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rake populate:heroes
 
-Things you may want to cover:
 
-* Ruby version
+# API
 
-* System dependencies
+/api/v1/heroes
+/api/v1/heroes/{ID}
 
-* Configuration
+/api/v1/abilities
+/api/v1/abilities/{ID}
 
-* Database creation
+# Admin
 
-* Database initialization
+/admin
 
-* How to run the test suite
+# Tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bundle exec rspec spec/
