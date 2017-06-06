@@ -6,12 +6,13 @@ module Overwatch
     end
 
     def heroes
-      get('/hero').collect do |hero|
+      get('/hero').fetch('data', []).collect do |hero|
         Hero.new(hero)
       end
     end
 
     def hero(id)
+      Hero.new(get("/hero/#{id}"))
     end
 
     private
@@ -21,7 +22,7 @@ module Overwatch
     end
 
     def json_data(response)
-      JSON[response.body].fetch('data', [])
+      JSON[response.body]
     end
   end
 end
