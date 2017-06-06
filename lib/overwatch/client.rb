@@ -7,22 +7,22 @@ module Overwatch
 
     def heroes
       get('/hero').fetch('data', []).collect do |hero|
-        Hero.new(hero)
+        Overwatch::Hero.new(hero)
       end
     end
 
     def abilities
       get('/ability').fetch('data', []).collect do |ability|
-        Ability.new(ability)
+        Overwatch::Ability.new(ability)
       end
     end
 
     def ability(id)
-      Ability.new(get("/ability/#{id}"))
+      Overwatch::Ability.new(get("/ability/#{id}"))
     end
 
     def hero(id)
-      Hero.new(get("/hero/#{id}"))
+      Overwatch::Hero.new(get("/hero/#{id}"))
     end
 
     private

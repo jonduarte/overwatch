@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170606131918) do
   create_table "abilities", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
-    t.boolean "is_ultimate", null: false
+    t.boolean "is_ultimate"
     t.string "api_id", null: false
     t.integer "hero_id"
     t.datetime "created_at", null: false

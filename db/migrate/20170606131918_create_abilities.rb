@@ -3,7 +3,7 @@ class CreateAbilities < ActiveRecord::Migration[5.1]
     create_table :abilities do |t|
       t.string :name, null: false
       t.text :description, null: false
-      t.boolean :is_ultimate, null: false
+      t.boolean :is_ultimate
       t.string :api_id, null: false
       t.references :hero, foreign_key: true
 
