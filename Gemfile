@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rest-client'
 gem 'hashie'
+gem 'jsonapi-resources'
 
 group :development, :test do
   gem 'byebug', platform: :mri
